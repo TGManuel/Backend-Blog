@@ -4,7 +4,7 @@ import Course from "../course/course.model.js";
 export const createPost = async (req, res) => {
     try {
         const { title, content, img, course } = req.body;
-        if (!title || !content || !img || !course) {
+        if (!title || !content || !course) {
             return res.status(400).json({
                 message: 'Todos los campos son obligatorios'
             });
