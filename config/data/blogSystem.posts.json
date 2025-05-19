@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "682a7795ba293ec10b99082f"
+  },
+  "title": "primera entrada actualizada a Taller III",
+  "content": "esta es la primera publicacion en el blog del curso de taller",
+  "img": "https://res.cloudinary.com/dqj8xgk4h/image/upload/v1698231230/curso-frontend/curso-frontend.png",
+  "course": {
+    "$oid": "682a6ee57e5ab6336ef78780"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-19T00:13:09.788Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-19T01:23:21.777Z"
+  }
+}]

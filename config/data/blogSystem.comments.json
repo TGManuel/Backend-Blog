@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "682aa7e080c2b0315912d52a"
+  },
+  "content": "el primer comentario de la primera publicación",
+  "post": {
+    "$oid": "682a7795ba293ec10b99082f"
+  },
+  "createdAt": {
+    "$date": "2025-05-19T03:39:12.581Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-19T03:39:12.581Z"
+  }
+}]
