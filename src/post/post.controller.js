@@ -4,19 +4,12 @@ import Course from "../course/course.model.js";
 export const createPost = async (req, res) => {
     try {
         const { title, content, img, course } = req.body;
-        if (!title || !content || !img || !course) {
-            return res.status(400).json({
-                message: 'Todos los campos son obligatorios'
-            });
-        }
+        
         const existCourse = await Course.findOne({ name: course });
-        if (!existCourse) {
-            return res.status(404).json({
-                message: 'El curso no existe'
-            });
-        }
 
-        const newPost = new Post({ title, content, img, course });
+        const { _id } = existCourse;
+
+        const newPost = new Post({ title, content, img, course: _id });
         await newPost.save();
 
         res.status(201).json({

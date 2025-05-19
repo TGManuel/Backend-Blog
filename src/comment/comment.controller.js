@@ -5,20 +5,10 @@ export const createComment = async (req, res) => {
     try {
         const { content, post } = req.body;
 
-        if (!content || !post) {
-            return res.status(400).json({
-                message: 'Contenido y post son requeridos'
-            });
-        }
-        const postExists = await Post.findById(post);
-        if (!postExists) {
-            return res.status(404).json({
-                message: 'Post no encontrado'
-            });
-        }
+        
         const newComment = new Comment({
             content,
-            post
+            post: post
         });
 
         const savedComment = await newComment.save();

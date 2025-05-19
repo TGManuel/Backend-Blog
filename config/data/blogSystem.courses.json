@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "682a6ee57e5ab6336ef78780"
+  },
+  "name": "Taller III",
+  "description": "El curso de Taller III pretende implementar proyectos y actividades que enfoquen al alumno a un ambiente práctico de la programación. ",
+  "createdAt": {
+    "$date": "2025-05-18T23:36:05.675Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-18T23:36:05.675Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682a6ee57e5ab6336ef78785"
+  },
+  "name": "Tecnologia III",
+  "description": "El curso de Tecnología III pretende llevarlo por la teoría de cada tema a aplicar durante la clase de taller, siendo la teoría lo primero a entender, para luego proceder a la práctica.",
+  "createdAt": {
+    "$date": "2025-05-18T23:36:05.714Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-18T23:36:05.714Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682a6ee57e5ab6336ef78788"
+  },
+  "name": "Practica Supervisada",
+  "description": "El curso de Práctica supervisada pretende conjuntar las áreas de Taller III y Tecnología III, dándole un enfoque más externo, y acercando a la realidad de la industria de la tecnología.",
+  "createdAt": {
+    "$date": "2025-05-18T23:36:05.732Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-18T23:36:05.732Z"
+  }
+}]

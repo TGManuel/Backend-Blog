@@ -14,7 +14,7 @@ const postSchema = new Schema({
     },
     img: {
         type: String,
-        required: true
+        default: 'https://res.cloudinary.com/dqj8xgk4h/image/upload/v1698231230/curso-frontend/curso-frontend.png'
     },
     course: {
         type: Schema.Types.ObjectId,
@@ -37,6 +37,9 @@ postSchema.method('toJSON', function() {
     return object;
 }
 );
+
+postSchema.plugin(autopopulate);
+
 
 const Post = model('Post', postSchema);
 

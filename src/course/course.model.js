@@ -4,7 +4,7 @@ const courseSchema = new Schema({
     name: {
         type: String,
         required: true,
-        enum: ['Tecnologia', 'Taller', 'Practica Supervisada'],
+        enum: ['Tecnologia III', 'Taller III', 'Practica Supervisada'],
         unique: true
     },
     description: {

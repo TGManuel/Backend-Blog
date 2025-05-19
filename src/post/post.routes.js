@@ -1,10 +1,10 @@
 import { Router } from 'express';
 import { getPostsByCourse, getPostById, getPosts, createPost, updatePost, deletePost } from './post.controller.js';
-
+import { validatePost } from '../middlewares/validate-post.js';
 const router = Router();
 
 router.get(
-    '/curso/:courseId',
+    '/:courseId',
     getPostsByCourse
 );
 
@@ -20,6 +20,7 @@ router.get(
 
 router.post(
     '/create',
+    validatePost,
     createPost
 );
 
