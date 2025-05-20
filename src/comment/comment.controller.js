@@ -3,10 +3,11 @@ import Post from "../post/post.model.js";
 
 export const createComment = async (req, res) => {
     try {
-        const { content, post } = req.body;
+        const { author, content, post } = req.body;
 
         
         const newComment = new Comment({
+            author,
             content,
             post: post
         });
@@ -89,3 +90,54 @@ export const getCommentsByPostId = async (req, res) => {
     }
 }
 
+export const updateComment = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { author, content } = req.body;
+
+        const updatedComment = await Comment.findByIdAndUpdate(id, {
+            author,
+            content
+        }, { new: true });
+
+        if (!updatedComment) {
+            return res.status(404).json({
+                message: 'Comentario no encontrado'
+            });
+        }
+
+        res.status(200).json({
+            message: 'Comentario actualizado exitosamente',
+            comment: updatedComment
+        });
+    } catch (error) {
+        res.status(500).json({
+            message: 'Error al actualizar el comentario',
+            error: error.message
+        });
+    }
+}
+
+export const deleteComment = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        const deletedComment = await Comment.findByIdAndDelete(id);
+
+        if (!deletedComment) {
+            return res.status(404).json({
+                message: 'Comentario no encontrado'
+            });
+        }
+
+        res.status(200).json({
+            message: 'Comentario eliminado exitosamente',
+            comment: deletedComment
+        });
+    } catch (error) {
+        res.status(500).json({
+            message: 'Error al eliminar el comentario',
+            error: error.message
+        });
+    }
+}

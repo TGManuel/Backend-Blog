@@ -2,6 +2,10 @@ import { Schema, model } from "mongoose";
 
 const commentSchema = new Schema(
   {
+    author: {
+      type: String,
+      default: "Anonymous",
+    },
     content: {
       type: String,
       required: true,
